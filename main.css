@@ -7,10 +7,14 @@
 
 /* Set default font and background color */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: "Monaco", monospace;
+    background-color: #9DBEBB;
     color: #333;
     line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #F4E9CD;
 }
 
 /* Container class for layout */
@@ -22,16 +26,16 @@ body {
 
 /* Header styles */
 header {
-    background: #333;
-    color: #fff;
+    background: #031926;
+    color: #F4E9CD;
     padding-top: 30px;
     min-height: 70px;
-    border-bottom: #77aaff 3px solid;
+    border-bottom: #9DBEBB 3px solid;
     text-align: center;
 }
 
 header a {
-    color: #fff;
+    color: #468189;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
@@ -51,24 +55,23 @@ header li {
 /* Main content styles */
 main {
     padding: 20px;
-    background: #f4e8d2;
-    margin-top: 20px;
+    background: #77ACA2;
+    box-sizing: border-box;
 }
 
 /* Footer styles */
 footer {
-    background: #333;
-    color: #fff;
+    background: #031926;
+    color: #F4E9CD;
     text-align: center;
     padding: 10px;
-    margin-top: 20px;
 }
 
 /* Navigation styles */
 nav {
-    background: #444;
-    color: #fff;
-    padding: 10px 0;
+    background: #468189;
+    color: #F4E9CD;
+    /* padding: 10px 0; */
     text-align: center; /* Center the nav buttons */
 }
 
@@ -81,11 +84,11 @@ nav ul {
 
 nav li {
     display: inline;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 nav a {
-    color: #fff;
+    color: #F4E9CD;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
@@ -93,4 +96,11 @@ nav a {
 
 nav a:hover {
     color: #77aaff;
+}
+
+.topnav {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
 }
