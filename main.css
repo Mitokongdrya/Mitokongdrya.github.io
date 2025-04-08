@@ -1,11 +1,9 @@
-/* Reset some default browser styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Set default font and background color */
 body {
     font-family: "Monaco", monospace;
     background-color: #9DBEBB;
@@ -13,18 +11,6 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3 {
-    color: #F4E9CD;
-}
-
-/* Container class for layout */
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-/* Header styles */
 header {
     background: #031926;
     color: #F4E9CD;
@@ -34,57 +20,43 @@ header {
     text-align: center;
 }
 
-header a {
-    color: #468189;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-header ul {
-    padding: 0;
-    list-style: none;
-    display: inline-block;
-}
-
-header li {
-    display: inline;
-    padding: 0 20px 0 20px;
-}
-
-/* Main content styles */
 main {
     padding: 20px;
     background: #77ACA2;
     box-sizing: border-box;
 }
 
-/* Footer styles */
 footer {
     background: #031926;
     color: #F4E9CD;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     text-align: center;
     padding: 10px;
+    border-top: #9DBEBB 3px solid;
 }
 
 /* Navigation styles */
 nav {
     background: #468189;
     color: #F4E9CD;
-    /* padding: 10px 0; */
-    text-align: center; /* Center the nav buttons */
+    text-align: center;
+    border-top: #9DBEBB 3px solid;
+    border-bottom: #9DBEBB 3px solid;
 }
 
 
 nav ul {
     padding: 0;
     list-style: none;
-    display: inline-block; /* Center the nav buttons */
+    display: inline-block; 
 }
 
 nav li {
     display: inline;
-    padding: 0 40px;
+    padding: 0 20px;
 }
 
 nav a {
@@ -95,6 +67,7 @@ nav a {
 }
 
 nav a:hover {
+    background-color: #031926;
     color: #77aaff;
 }
 
@@ -103,4 +76,13 @@ nav a:hover {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+}
+
+.active {
+    background-color: #031926;
+    color: #F4E9CD;
+}
+
+h1, h2, h3 {
+    color: #F4E9CD;
 }
