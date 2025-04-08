@@ -15,7 +15,7 @@ header {
     background: #031926;
     color: #F4E9CD;
     padding: 30px;
-    min-height: 70px;
+    height: 140px;
     border-bottom: #9DBEBB 3px solid;
     text-align: center;
     position: sticky;
@@ -28,6 +28,7 @@ main {
     padding: 20px;
     background: #77ACA2;
     box-sizing: border-box;
+    min-height: calc(100vh - 140px - 40px);
 }
 
 footer {
@@ -38,6 +39,7 @@ footer {
     left: 0;
     right: 0;
     text-align: center;
+    height: 40px;
     padding: 10px;
     border-top: #9DBEBB 3px solid;
 }
