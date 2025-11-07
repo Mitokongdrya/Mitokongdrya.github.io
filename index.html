@@ -6,83 +6,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, noarchive, nofollow">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="manifest" href="/images/site.webmanifest"> -->
 
     <title>Josiah Liebert</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 
 
 
 <body>
-    <div class="name-group">
-        <div class="name-tag" style="line-height:0.85;">
-            <span style="display:block;margin:0;padding:0;">Josiah</span>
-            <span style="display:block;margin:0;padding:0;">Liebert</span>
-        </div>
-        <div class="tagline">Web Developer & Designer</div>
-    </div>
-    <div id="scroll-rocket-container">
-        <svg id="rocket-path-svg" width="25" height="800" viewBox="0 0 25 1200" xmlns="http://www.w3.org/2000/svg">
+    <div class="layout">
 
-            <!-- BACKGROUND TRACK (always visible) -->
-            <rect width="1200" height="25" transform="matrix(0 -1 -1 0 25 1200)" fill="#34263A" />
-            <rect width="1200" height="8" transform="matrix(0 -1 -1 0 25 1200)" fill="#762A34" />
-            <rect width="1200" height="8" transform="matrix(0 -1 -1 0 8 1200)" fill="#762A34" />
+        <aside class="left-col">
+            <div class="name-group">
+                <div class="name-tag" style="line-height:0.85;">
+                    <span style="display:block;margin:0;padding:0;">Josiah</span>
+                    <span style="display:block;margin:0;padding:0;">Liebert</span>
+                </div>
+                <div class="tagline">Inclusive Designer</div>
+            </div>
+            <div class="planets">
+                <img src="planets.svg" alt="Decorative planets" class="planets-svg">
 
-            <clipPath id="rocketRevealClip">
-                <rect id="rocketRevealRect" x="0" y="1200" width="25" height="1200" />
-            </clipPath>
+            </div>
+        </aside>
+        <main class="content-container">
+            <section class="content-section content-hero" style="font-weight:700;">
+                <h1 style="font-size:2.25rem; font-weight:900; margin:0 0 .5rem;">Hello People!</h1>
+                <p style="font-size:1.125rem; font-weight:700; margin:0;">
+                    I am a 4th year student at Oregon State University studying Computer Science,
+                    with a focus in Business Administration.
+                    I am passionate about creating inclusive tools and experiences,
+                    both through computer science and in the physical world.
 
-            <g clip-path="url(#rocketRevealClip)">
-                <rect width="1200" height="25" transform="matrix(0 -1 -1 0 25 1200)" fill="#D63F33" />
-                <rect width="1200" height="8" transform="matrix(0 -1 -1 0 25 1200)" fill="#EFA03D" />
-                <rect width="1200" height="8" transform="matrix(0 -1 -1 0 8 1200)" fill="#EFA03D" />
-            </g>
-        </svg>
+                </p>
+            </section>
 
-        <img id="rocket" src="rocket.svg" alt="Rocket">
-    </div>
+            <section class="content-section">
+                <h1>Projects</h1>
+                <div class="project-container">
+                    <div class="project-item">
+                        <h2>License Plater</h2>
+                        <img src="images/License_Plater.png" alt="License Plater" style="width:100%;max-width:400px;">
+                        <p>
+                            A license plate tracking and finding tool. Still a work in progress, but you can try it out
+                            <a href="https://plate-finder.vercel.app">here</a>.
+                        </p>
+                    </div>
+                    <div class="project-item">
+                        <h2>CampusView</h2>
+                        <img src="images/Campus_View.png" alt="CampusView" style="width:100%;max-width:400px;">
+                        <p>
+                            A reimagination of Oregon State University's dining & club apps. Repo found
+                            <a href="https://github.com/Mitokongdrya/CampusView.git">here</a>.
+                        </p>
+                    </div>
+                    <div class="project-item">
+                        <h2>Roll Call Brawl</h2>
+                        <img src="images/Roll_Call_Brawl.jpg" alt="Roll Call Brawl" style="width:100%;max-width:400px;">
+                        <p>
+                            This was the first Hackathon project I participated in.
+                            The idea was to create a fun & high stakes game to encourage attendance in classes.
+                            Project can be found <a href="https://devpost.com/software/roll-call-brawl">here</a>.
+                        </p>
+                    </div>
+                    <div class="project-item">
+                        <h2>College of Engineering Website Redesign</h2>
+                        <img src="images/COE_Redesign.png" alt="COE Redesign" style="width:100%;max-width:400px;">
+                        <p>
+                            This is a Figma mockup of a redesigned website for OSU's College of Engineering.
+                            The design incorporates user feedback and usability heuristics to create a user-friendly
+                            experience.
+                            The mockup can be found <a
+                                href="https://www.figma.com/proto/DrCf8oEzC6JR2GffQXUxQh/CS-352---OSU-COE-Redesign-Final-Prototype?node-id=15-9&starting-point-node-id=15%3A9&t=KeZX10Ce5JHkmxDF-1">here</a>.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-    <div class="planets">
-        <img src="planets.svg" alt="Decorative planets" class="planets-svg">
+            <!-- <section class="content-section">
+                <h1>Extracurriculars</h1>
+                <p>
+                </p>
+            </section>
 
-    </div>
+            <section class="connect-section">
+                <h1>Connect With Me</h1>
+                <p>Work experience here...</p>
+            </section> -->
+        </main>
 
+        <aside class="right-col">
+            <div id="scroll-rocket-container">
+                <svg id="rocket-path-svg" width="25" height="800" viewBox="0 0 25 1200"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect width="1200" height="25" transform="matrix(0 -1 -1 0 25 1200)" fill="#34263A" />
+                    <rect width="1200" height="8" transform="matrix(0 -1 -1 0 25 1200)" fill="#762A34" />
+                    <rect width="1200" height="8" transform="matrix(0 -1 -1 0 8 1200)" fill="#762A34" />
 
-    <!-- <main class="content-container">
-  <section class="content-section">
-    <h1>About Me</h1>
-    <p>Your intro text here...</p>
-  </section>
+                    <clipPath id="rocketRevealClip">
+                        <rect id="rocketRevealRect" x="0" y="1200" width="25" height="1200" />
+                    </clipPath>
 
-  <section class="content-section">
-    <h1>Projects</h1>
-    <p>Project content here...</p>
-  </section>
+                    <g clip-path="url(#rocketRevealClip)">
+                        <rect width="1200" height="25" transform="matrix(0 -1 -1 0 25 1200)" fill="#D63F33" />
+                        <rect width="1200" height="8" transform="matrix(0 -1 -1 0 25 1200)" fill="#EFA03D" />
+                        <rect width="1200" height="8" transform="matrix(0 -1 -1 0 8 1200)" fill="#EFA03D" />
+                    </g>
+                </svg>
 
-  <section class="content-section">
-    <h1>Experience</h1>
-    <p>Work experience here...</p>
-  </section> -->
+                <img id="rocket" src="rocket.svg" alt="Rocket">
+            </div>
+        </aside>
 
-
-    </main>
-
-    <div class="jpl-arcs">
-        <svg viewBox="0 0 200 800" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 0 100 A 100 100 0 0 1 200 100" stroke="#fff" fill="none" stroke-width="3" />
-            <path d="M 0 200 A 200 200 0 0 1 200 200" stroke="#fff" fill="none" stroke-width="4" />
-            <path d="M 0 300 A 300 300 0 0 1 200 300" stroke="#fff" fill="none" stroke-width="6" />
-            <path d="M 0 400 A 400 400 0 0 1 200 400" stroke="#fff" fill="none" stroke-width="8" />
-        </svg>
-    </div>
-
-    <script src="scripts.js"></script>
+        <script src="scripts.js"></script>
 </body>
 
 </html>

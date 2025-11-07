@@ -1,44 +1,24 @@
 :root {
     --color-1: #F4E8D2;
-    /* 41.4% */
     --color-2: #0D7043;
-    /* 9.0% */
     --color-3: #1F1F21;
-    /* 7.3% */
     --color-4: #722452;
-    /* 4.6% */
     --color-5: #B52B3B;
-    /* 4.2% */
     --color-6: #762A34;
-    /* 3.4% */
     --color-7: #EFA03D;
-    /* 3.2% */
     --color-8: #606B45;
-    /* 3.1% */
     --color-9: #4B2C31;
-    /* 3.0% */
     --color-10: #5A9F9A;
-    /* 2.8% */
     --color-11: #217771;
-    /* 2.7% */
     --color-12: #EA5A31;
-    /* 2.5% */
     --color-13: #BBB9A5;
-    /* 2.4% */
     --color-14: #34263A;
-    /* 2.4% */
     --color-15: #94B94B;
-    /* 2.3% */
     --color-16: #6B534F;
-    /* 1.4% */
     --color-17: #914F39;
-    /* 1.4% */
     --color-18: #D63F33;
-    /* 1.3% */
     --color-19: #EBAFA3;
-    /* 1.0% */
     --color-20: #46985B;
-    /* 0.7% */
 }
 
 * {
@@ -53,7 +33,7 @@
 
 body {
     font-family: "Monaco", monospace;
-    background: linear-gradient(to bottom, #9DBEBB, #77ACA2);
+    background: #5A9F9A;
     color: #333;
     line-height: 1.6;
     min-height: 100vh;
@@ -62,13 +42,37 @@ body {
 main {
     position: relative;
     z-index: 30;
-    /* above default (planets) but below #scroll-rocket-container (z-index:50) */
     box-sizing: border-box;
     padding: 20px 40px;
     padding-bottom: 90px;
     min-height: calc(100vh - 140px - 70px);
     margin-right: 80px;
-    /* keep content clear of the fixed rocket on the right */
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 35% 1fr 80px;
+    height: 100vh;
+}
+
+.left-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.content-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
 }
 
 
@@ -76,32 +80,26 @@ main {
 .name-group {
     position: fixed;
     top: 40px;
-    left: 120px;
+    transform: translateX(40px);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
-    /* space between name and tagline */
     pointer-events: none;
-    /* keep original behavior */
 }
 
 .name-tag {
-    /* no absolute positioning so it sits above the tagline in the flow */
     position: relative;
-    font-size: clamp(4rem, 5vw, 4rem);
+    font-size: clamp(2rem, 5vw, 4rem);
     font-weight: bolder;
     font-family: "Impact", "fantasy", sans-serif;
     color: #151418;
     z-index: 2;
-    /* ensures it visually overlays if needed */
 }
 
 .tagline {
-    font-size: 1rem;
-    opacity: 0.7;
+    font-size: clamp(0.5rem, 2.5vw, 1.5rem);
     margin: 0;
-    /* controlled by gap on the container */
     z-index: 1;
 }
 
@@ -109,8 +107,6 @@ main {
     stroke: white;
     stroke-width: 3;
     fill: none;
-    /* use the viewport height so the dash covers the full visible column;
-         this lets you reveal the path from bottom to top by animating stroke-dashoffset */
     stroke-dasharray: 100vh;
     stroke-dashoffset: 100vh;
     transition: stroke-dashoffset 0.1s linear;
@@ -119,7 +115,6 @@ main {
 }
 
 #rocket-path-svg {
-    /* make the SVG fill the full height of the fixed container so the path runs bottom→top */
     position: absolute;
     right: 0;
     top: 0;
@@ -138,7 +133,6 @@ main {
     width: 40px;
     pointer-events: none;
     z-index: 50;
-    /* keep the whole container above page content */
 }
 
 #rocket {
@@ -147,7 +141,44 @@ main {
     width: 30px;
     transition: transform 0.1s linear;
     z-index: 100;
-    /* ensure the rocket renders above the path */
     transform: translateY(0);
     will-change: transform;
+}
+
+.rocket-stop.active {
+  background: white;
+  border-color: yellow;
+}
+.rocket-stop {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    background: #bbb;
+    margin: 20px 0;
+    transition: background 0.3s, border-color 0.3s;
+}   
+
+.planets-svg {
+    width : 100%;
+    height : auto;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.project-item {
+  width: 100%;
+  max-width: 500px;
+  background: #9DBEBB;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  align-items: center;
+  text-align: center;
 }
