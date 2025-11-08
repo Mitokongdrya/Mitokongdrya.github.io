@@ -1,3 +1,5 @@
-Personal Portfolio website for Josiah Liebert. 
+# Personal Portfolio website for Josiah Liebert
 
-Still in progress...
+## Live Site at found [here](https://mitokongdrya.github.io/)
+
+(Better ReadMe coming soon)
