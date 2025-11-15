@@ -99,6 +99,13 @@ h1 {
     font-family: "Impact", "fantasy", sans-serif;
     color: #151418;
     z-index: 2;
+    line-height: 0.85;
+}
+
+.name-line {
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .tagline {
@@ -107,66 +114,26 @@ h1 {
     z-index: 1;
 }
 
-#rocket-path {
-    stroke: white;
-    stroke-width: 3;
-    fill: none;
-    stroke-dasharray: 100vh;
-    stroke-dashoffset: 100vh;
-    transition: stroke-dashoffset 0.1s linear;
-    stroke-linecap: round;
-    z-index: 1;
-}
-
-#rocket-path-svg {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-#scroll-rocket-container {
-    position: fixed;
-    right: 20px;
-    top: 0;
-    height: 100vh;
-    width: 40px;
-    pointer-events: none;
-    z-index: 50;
-}
-
-#rocket {
-    position: absolute;
-    left: 5px;
-    width: 30px;
-    transition: transform 0.1s linear;
-    z-index: 100;
-    transform: translateY(0);
-    will-change: transform;
-}
-
-.rocket-stop.active {
-    background: white;
-    border-color: yellow;
-}
-
-.rocket-stop {
-    width: 12px;
-    height: 12px;
-    border: 2px solid #333;
-    border-radius: 50%;
-    background: #bbb;
-    margin: 20px 0;
-    transition: background 0.3s, border-color 0.3s;
-}
-
 .planets-svg {
     width: 100%;
     height: auto;
+}
+
+.content-hero {
+    font-weight: 700;
+}
+
+.content-hero h1 {
+    font-size: 2.25rem;
+    font-weight: 900;
+    margin: 0 0 .5rem;
+}
+
+.content-hero p {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 0;
+    max-width: 600px; 
 }
 
 .project-container {
@@ -187,6 +154,19 @@ h1 {
     align-items: center;
     text-align: center;
 }
+
+.project-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 6px;      
+    display: block;
+    margin: 0 auto;          
+}
+
+.project-img-link {
+    display: inline-block;
+}
+
 
 .project-item:hover {
     transform: translateY(-5px);
@@ -223,6 +203,13 @@ h1 {
     border: 1px solid #ddd;
 }
 
+.connect-icon {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+
+
 .connect-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -230,4 +217,118 @@ h1 {
 
 .connect-item:hover img {
     filter: brightness(1.2);
+}
+
+#rocket-path-svg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#scroll-rocket-container {
+    position: fixed;
+    right: 20px;
+    top: 0;
+    height: 100vh;
+    width: 40px;
+    pointer-events: none;
+    z-index: 50;
+}
+
+#rocket {
+    position: absolute;
+    left: 5px;
+    width: 30px;
+    transition: transform 0.1s linear;
+    z-index: 100;
+    transform: translateY(0);
+    will-change: transform;
+}
+
+@media (max-width: 768px) {
+
+    .name-group {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        pointer-events: none;
+        gap: 4px;
+        z-index: 20;
+    }
+
+    .name-tag {
+        font-size: clamp(2rem, 7vw, 3.2rem);
+        line-height: 0.9;
+    }
+
+    .tagline {
+        font-size: clamp(0.8rem, 5vw, 1rem);
+        letter-spacing: 0.05em;
+    }
+
+    .layout {
+        padding-top: 120px; 
+        grid-template-columns: 18% 1fr 40px;
+    }
+    
+    .content-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .content-hero {
+        text-align: center;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 420px;
+        padding-top: 10px;
+    }
+
+    .content-hero h1 {
+        font-size: 1.9rem;
+        margin-bottom: 8px;
+    }
+
+    .content-hero p {
+        font-size: 1rem;
+        line-height: 1.45;
+    }
+
+    .planets {
+        display: none;
+    }
+
+    #scroll-rocket-container {
+        right: 4px;
+        width: 24px;
+        height: 100vh;
+    }
+
+    #rocket {
+        width: 22px;
+        left: 1px;
+    }
+
+    #rocket-path-svg {
+        width: 24px;
+    }
+
+    .right-col {
+        width: 32px;
+        padding: 0;
+    }
+
+    main {
+        margin-right: 32px;
+        padding: 16px;
+    }
 }
